@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CrewView | Crew</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../src/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	</head>
+	<body>
+		<nav>
+			<p id="username"></p>
+		</nav>
+        <div class="sidenav">
+			<button onclick="newcrew('block')">+ New Crew</button>
+			<a href="../dashboard" id="selected">Crews</a>
+			<a href="../discover">Discover</a>
+			<a onclick="logout()">Logout</a>
+		</div>
+		<div class="crews" style="display: block; text-align: left;">
+            <h1 id="name">Crew Name</h1>
+            <p id="members"><i class="fa-solid fa-users"></i>XXX Members</p>
+			<button id="action">Leave Crew</button>
+            <button onclick="navigator.clipboard.writeText(window.location.href)">Share</button>
+            <h3 id="description"><p style="font-weight: bold; padding-bottom: 5px;">Description</p>Crew Description...</h3>
+			<h3 id="links"><p style="font-weight: bold; padding-bottom: 5px;">Links</p>No links have been shared yet.</h3>
+        </div>
+		<div class="prompt">
+			<div class="newcrew">
+				<h1>New Crew</h1>
+				<p>Fill in the information about the new crew.</p>
+				<input placeholder="Crew Name" class="orderinput" id="name">	
+				<textarea placeholder="Crew description..." class="orderinput" id="description"></textarea>
+                <label><input type="checkbox" value="no" id="private"> Private Crew </label>
+				<div class="newcrewactions">
+					<button id="cancel" style="margin-right: 15px;" onclick="newcrew('none')">Cancel</button>
+					<button id="next" onclick="createcrew()">Create</button>
+				</div>
+				<p class="errormessage">Error</p>
+			</div>
+		</div>
+		<div class="loading"></div>
+        <script src="../src/functions.js"></script>
+		<script src="../src/auth.js"></script>
+	</body>
+</html>
