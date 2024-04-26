@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CrewView | Authentication</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./src/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	</head>
+	<body>
+		<nav>
+			<p>CrewView - Authentication</p>
+		</nav>
+		<div class="authform">
+			<div class="authtype">
+				<button id="selected" onclick="toggle(this)">Login</button>
+				<button onclick="toggle(this)">Sign Up</button>
+			</div>
+            <div id="login" class="authinfo">
+                <h1 id="title">Welcome Back.</h1>
+				<p id="instructions">Please log into your account.</p>
+				<input placeholder="Email Address" id="lEmail">
+				<input placeholder="Password" type="password" id="lPassword">
+				<a class="forgotpassword" href="./password-reset">Forgot Password?</a>
+				<button id="finalbtn" onclick="login()">Login</button>
+				<p class="errormessage">Error</p>
+            </div>
+            <div id="signup" class="authinfo" style="display: none;">
+                <h1 id="title">Nice to meet you.</h1>
+				<p id="instructions">Please create your account.</p>
+                <input placeholder="Name" id="sName">
+                <input placeholder="Username" id="sUsername">
+				<input placeholder="Email Address" id="sEmail">
+				<input placeholder="Password" type="password" id="sPassword">
+				<button id="finalbtn" onclick="signup()">Sign Up</button>
+				<p class="errormessage">Error</p>
+            </div>
+		</div>
+		<div class="loading"></div>
+        <script src="./src/functions.js"></script>
+		<script src="./src/auth.js"></script>
+	</body>
+</html>

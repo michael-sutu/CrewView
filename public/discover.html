@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CrewView | Discover</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./src/styles.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	</head>
+	<body>
+		<nav>
+			<p id="username"></p>
+		</nav>
+        <div class="sidenav">
+			<button onclick="newcrew('block')">+ New Crew</button>
+			<a href="./dashboard">Crews</a>
+			<a id="selected">Discover</a>
+			<a onclick="logout()">Logout</a>
+		</div>
+		<div class="input">
+			<i class="fa-solid fa-magnifying-glass" onclick="searchcrew()"></i>
+			<input placeholder="Crew Name" id="searchquery">
+		</div>
+		<div class="crews" style="margin-top: 15px;"></div>
+		<div class="prompt">
+			<div class="newcrew">
+				<h1>New Crew</h1>
+				<p>Fill in the information about the new crew.</p>
+				<input placeholder="Crew Name" class="orderinput">	
+				<textarea placeholder="Crew description..." class="orderinput"></textarea>
+                <label><input type="checkbox" value="no"> Private Crew </label>
+				<div class="newcrewactions">
+					<button id="cancel" style="margin-right: 15px;" onclick="newcrew('none')">Cancel</button>
+					<button id="next" onclick="createcrew()">Create</button>
+				</div>
+				<p class="errormessage">Error</p>
+			</div>
+		</div>
+		<div class="loading"></div>
+        <script src="./src/functions.js"></script>
+		<script src="./src/auth.js"></script>
+	</body>
+</html>
