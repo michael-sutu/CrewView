@@ -1,0 +1,423 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 1px;
+    width: 100%;
+    z-index: 1;
+}
+
+nav > p {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.authform {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	padding: 40px;
+	justify-content: center;
+	margin: 80px auto;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.authtype {
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.authtype > button {
+	flex: 1;
+	width: 200px;
+	border: 0px;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.login > h1 {
+	margin-bottom: -15px;
+}
+
+.authinfo > input {
+	border: 0px;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	width: 340px;
+	margin-top: 15px;
+}
+
+.authinfo > input:focus {
+	outline: none;
+}
+
+.authinfo {
+	padding: 10px 20px;
+}
+
+.authinfo > button {
+	font-family: 'Poppins', sans-serif;
+	width: 360px;
+	padding: 10px;
+	font-size: 15px;
+	border: 0px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	background-color: #757B86;
+	color: white;
+	margin-top: 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.authinfo > button:hover {
+	background-color: #585b5f;
+}
+
+.authtype > button:hover {
+	background-color: rgb(245, 245, 245);
+}
+
+.authtype > #selected {
+	border-bottom: 7px solid#007BFF;
+}
+
+.sidenav {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);    
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px; 
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    z-index: 2;
+}
+
+.sidenav > button {
+	font-family: 'Poppins', sans-serif;
+	background-color:#007BFF;
+	font-weight: bold;
+	font-size: 15px;
+	border: 0px;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.sidenav > a {
+	text-align: left;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin-top: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.sidenav > #selected {
+	border-left: 6px solid#007BFF;
+}
+
+.sidenav > a:hover {
+	background-color: rgb(245, 245, 245);
+}
+
+.sidenav > button:hover {
+	background-color:#0069D9;
+}
+
+.prompt {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 3;
+}
+
+.newcrew {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	padding: 40px;
+	justify-content: center;
+	margin: 50px auto;
+	border-radius: 5px;
+	background-color: white;
+	text-align: left;
+	display: none;
+}
+
+.newcrew > h1 {
+	margin: 0;
+}
+
+.newcrew > input, .newcrew > textarea {
+	border: 0px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	width: 480px;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px;
+	margin-top: 15px;
+}
+
+.newcrew label {
+    padding: 10px 0px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.newcrew > textarea {
+	height: 175px;
+	resize: none;
+	margin-bottom: 15px;
+}
+
+.newcrew > input:focus, .newcrew > textarea:focus {
+	outline: none;
+}
+
+.newcrewactions {
+	display: flex;
+	justify-content: space-between;
+    margin-top: 30px;
+}
+
+.newcrewactions > button, #close {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	flex: 1;
+	width: 242.5px;
+	border: 0px;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Poppins', sans-serif;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#close {
+	float: right;
+}
+
+.newcrewactions > #cancel:hover {
+	background-color: rgb(245, 245, 245);
+}
+
+.newcrewactions > #create:hover, .newcrewactions > #next:hover, #close:hover, .newcrewactions > #add:hover {
+	background-color: #0069D9;
+}
+
+.newcrewactions > #create, .newcrewactions > #next, #close, #add {
+	background-color:#007BFF;
+	color: white;
+}
+
+#finalbtn > i {
+	animation: spin 0.7s linear infinite; 
+	border-radius: 50px;
+	display: block;
+	padding: 3.8px;
+}
+
+#finalbtn {
+    background-color: #007BFF;
+}
+
+.errormessage {
+	text-align: left;
+	color: red;
+	font-weight: bold;
+	margin-top: 10px;
+	display: none;
+}
+
+.forgotpassword {
+	text-align: left;
+	font-weight: bold;
+	margin-top: 10px;
+	cursor: pointer;
+	float: left;
+	color: black;
+	text-decoration: none;
+	margin-bottom: 15px;
+}
+
+.loading {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+}
+
+#username {
+    float: right;
+    margin-right: 30px;
+}
+
+#forgot {
+	margin-top: -15px;
+}
+
+.crews {
+    flex-grow: 1;
+    margin-top: 40px; 
+    margin-left: 280px; 
+    overflow: auto; 
+    width: calc(100% - 290px); 
+    height: calc(100% - 40px); 
+}
+
+.crews {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    padding: 10px;
+    gap: 10px;
+}
+
+.crews h1, .crews p {
+	margin: 0 auto;
+}
+
+.authform, .newcrew {
+    z-index: 3; 
+    position: relative;
+}
+
+.crew {
+    background-color: #f9f9f9; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    padding: 10px;
+    text-align: left;
+	width: 350px;
+	padding: 30px 0px 30px 25px;
+}
+
+.crew h2, .crew p {
+	margin: 0px auto;
+	padding: 0px auto;
+	margin: 2.5px 0px;
+}
+
+.crew p, .crews i {
+	color: rgb(80, 80, 80);
+	margin-right: 10px;
+}
+
+.crews button {
+	font-family: 'Poppins', sans-serif;
+	background-color:#007BFF;
+	font-weight: bold;
+	font-size: 12px;
+	border: 0px;
+	padding: 10px 30px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 30px;
+}
+
+.crews h3 {
+	font-weight: 400;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	padding: 15px 15px;
+	max-width: 800px;
+	margin-top: 15px;
+}
+
+.crews button:hover {
+	background-color:#0069D9;
+}
+
+.input {
+	margin-top: 40px; 
+    margin-left: 290px; 
+	border: 1px solid rgba(0, 0, 0, 0.2);;
+	font-family: 'Poppins', sans-serif;
+	border-radius: 8px;
+	font-size: 18px;
+	color: rgba(30, 30, 30);
+	text-align: left;
+	cursor: pointer;
+	padding: 0px 20px;
+	width: 700px;
+}
+
+.input input {
+	font-family: 'Poppins', sans-serif;
+	border: 0px;
+	background-color: rgb(250, 250, 250);
+	width: 600px;
+	padding: 20px 10px;
+	font-size: 18px;
+}
+
+.crew-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    gap: 10px;
+}
+
+.input input:focus {
+	outline: none;
+}
+
+.link {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: flex-start; 
+    justify-content: flex-start;
+	padding: 15px 10px;
+	margin-top: 5px;
+}
