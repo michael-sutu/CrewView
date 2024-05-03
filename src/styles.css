@@ -421,3 +421,11 @@ input[type="checkbox"] {
 	padding: 15px 10px;
 	margin-top: 5px;
 }
+
+.extension {
+	bottom: 20px;
+	position: fixed;
+	padding: 10px 20px!important;
+	color: #007BFF!important;
+	border: #007BFF solid 1px;
+}
